@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" >
+        <title>Exercício 2</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <div class="links">
+            <a href="exercicio1.html">Exercício 1</a>
+            <a href="exercicio2.html">Exercício 2</a>
+        </div>
+        <div class="form">
+        <form>
+           <label>Tabuada do número:</label>
+           <input type="text" id="tab">
+           <button onclick="enviar()">Enviar</button><br>
+           <div id='resposta'></div>
+        </form>
+        </div>
+        
+        <script>
+            function enviar(){
+            let num = parseInt(document.getElementById("tab").value);
+            let resposta = document.getElementById('resposta');
+            let tabuada='';
+
+         for(var count=1; count<=10 ; count++)
+         tabuada += num+" x "+count+" = "+
+         num*count +"<br>";
+         resposta.innerHTML = tabuada;
+     }
+        </script>
+    </body>
+</html>
