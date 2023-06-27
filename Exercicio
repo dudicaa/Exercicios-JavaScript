@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" >
+        <title>Exercício 3</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+        <div class="links">
+            <a href="exercicio1.html">Exercício 1</a>
+            <a href="exercicio2.html">Exercício 2</a>
+            <a href="exercicio3.html">Exercício 3</a>
+            <a href="exercicio4.html">Exercício 4</a>
+        </div>
+        <div class="form">
+            <label>Nota 1:</label>
+            <input type="number" step="0.01" id="n1"><br>
+            <label>Nota 2:</label>
+            <input type="number" step="0.01" id="n2"><br>
+            <label>Nota 3:</label>
+            <input type="number" step="0.01" id="n3"><br>
+            <button onclick="enviar()">Enviar</button><br>
+            <div id='resposta'></div>
+        </div>
+        <script>
+        function enviar(){
+            let nota1 = parseFloat(document.getElementById("n1").value);
+            let nota2 = parseFloat(document.getElementById("n2").value);
+            let nota3 = parseFloat(document.getElementById("n3").value);
+            let media = (nota1 + nota2 + nota3)/2 ;
+            resposta.innerHTML= media;
+             if(media >= 6){
+                alert("Parabéns, você foi aprovado!")
+             }
+             else{
+                alert("Reprovado!")
+            }
+        }
+ </script>
+</body>
+</html>
